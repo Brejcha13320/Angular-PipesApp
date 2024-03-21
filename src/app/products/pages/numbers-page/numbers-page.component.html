@@ -1,0 +1,74 @@
+<p-panel header="Pipes Numéricos" class="p-1">
+  <p>Pipies incluídos en Angular - Usualmente en el Common Module</p>
+</p-panel>
+
+<div class="grid">
+  <div class="col-12 md:col-6">
+    <p-card header="Numero">
+      <ol>
+        <li>{{ customNumber }}</li>
+        <li>{{ customNumber }} | number</li>
+        <li>{{ customNumber }} | number:'1.2-2'</li>
+        <li>{{ customNumber }} | number:'1.4-4'</li>
+        <li>{{ customNumber }} | number:'1.6-6'</li>
+      </ol>
+
+      <hr />
+      <ol>
+        <li>{{ customNumber }} | currency</li>
+        <li>{{ customNumber }} | currency:'COP'</li>
+        <li>{{ customNumber }} | currency:'COP. '</li>
+        <li>{{ customNumber }} | currency:'':'symbol-narrow'</li>
+        <li>{{ customNumber }} | currency:'COP':'symbol-narrow'</li>
+        <li>{{ customNumber }} | currency:'HNL':'symbol-narrow'</li>
+        <li>{{ customNumber }} | currency:'EUR':'symbol-narrow'</li>
+        <li>{{ customNumber }} | currency:'JPY':'symbol-narrow'</li>
+        <li>{{ customNumber }} | currency:'COP':'symbol-narrow':'1.4-4'</li>
+        <li>{{ customNumber }} | currency:'COP':'symbol-narrow':'1.6-6'</li>
+      </ol>
+
+      <hr />
+      <ol>
+        <li>{{ customPercent }}</li>
+        <li>{{ customPercent }} | percent</li>
+        <li>{{ customPercent }} | percent:'1.2-2'</li>
+      </ol>
+    </p-card>
+  </div>
+  <div class="col-12 md:col-6">
+    <p-card header="Numero con Pipe">
+      <ol>
+        <li>{{ customNumber }}</li>
+        <li>{{ customNumber | number }}</li>
+        <li>{{ customNumber | number : "1.2-2" }}</li>
+        <li>{{ customNumber | number : "1.4-4" }}</li>
+        <li>{{ customNumber | number : "1.6-6" }}</li>
+      </ol>
+
+      <hr />
+      <ol>
+        <li>{{ customNumber | currency }}</li>
+        <li>{{ customNumber | currency : "COP" }}</li>
+        <li>{{ customNumber | currency : "COP. " }}</li>
+        <li>{{ customNumber | currency : "" : "symbol-narrow" }}</li>
+        <li>{{ customNumber | currency : "COP" : "symbol-narrow" }}</li>
+        <li>{{ customNumber | currency : "HNL" : "symbol-narrow" }}</li>
+        <li>{{ customNumber | currency : "EUR" : "symbol-narrow" }}</li>
+        <li>{{ customNumber | currency : "JPY" : "symbol-narrow" }}</li>
+        <li>
+          {{ customNumber | currency : "COP" : "symbol-narrow" : "1.4-4" }}
+        </li>
+        <li>
+          {{ customNumber | currency : "COP" : "symbol-narrow" : "1.6-6" }}
+        </li>
+      </ol>
+
+      <hr />
+      <ol>
+        <li>{{ customPercent }}</li>
+        <li>{{ customPercent | percent }}</li>
+        <li>{{ customPercent | percent : "1.2-2" }}</li>
+      </ol>
+    </p-card>
+  </div>
+</div>
